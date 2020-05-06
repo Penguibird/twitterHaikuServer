@@ -23,7 +23,7 @@ var stream = T.stream('statuses/sample')
 stream.on('tweet', tweet => {
   if (tweet.lang == 'en' && !tweet.in_reply_to_status_id && !tweet.entities.media && tweet.entities.urls.length == 0) {
     getSyllables(tweet.text).then(v => {
-      console.log(v);
+      // console.log(v);
       let url = "";
       if (v.numSyllables == 5) {
         if(haikuCounter.fives>0) {
@@ -53,6 +53,7 @@ stream.on('tweet', tweet => {
 
 const requestListener = function (req, res) {
   res.writeHead(200);
+  console.log(req)
   if(req == "getHaiku") {
     haikuCounter.fives += 2;
     haikuCounter.sevens +=1;
