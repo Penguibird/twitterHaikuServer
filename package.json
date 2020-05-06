@@ -1,0 +1,17 @@
+{
+  "name": "twitterhaiku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "twit": "^2.2.11",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

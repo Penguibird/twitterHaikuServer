@@ -1,0 +1,2 @@
+https://api.datamuse.com/words?sp=flower&qe=sp&md=s&max=1
+API that returns number of syllables
