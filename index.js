@@ -53,8 +53,7 @@ stream.on('tweet', tweet => {
 
 const requestListener = function (req, res) {
   res.writeHead(200);
-  console.log(req)
-  if(req == "getHaiku") {
+  if(req.url == "getHaiku") {
     haikuCounter.fives += 2;
     haikuCounter.sevens +=1;
     res.end(`The server is currently searching for ${haikuCounter.fives} five-verses and ${haikuCounter.sevens} seven-verses!`);
