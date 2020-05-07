@@ -21,7 +21,7 @@ var T = new Twit({
 var stream = T.stream('statuses/sample')
 
 stream.on('tweet', tweet => {
-  if (tweet.lang == 'en' && !tweet.in_reply_to_status_id && !tweet.entities.media && tweet.entities.urls.length == 0) {
+  if (tweet.lang == 'en' && !tweet.in_reply_to_status_id && !tweet.entities.media && tweet.entities.urls.length == 0 && !tweet.in_reply_to_user_id && !tweet.in_reply_to_screen_name && !tweet.quoted_status_id && tweet.entities.urls.length == 0) {
     getSyllables(tweet.text).then(v => {
       // console.log(v);
       let url = "";
